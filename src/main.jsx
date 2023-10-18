@@ -10,35 +10,54 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Home from './pages/Home/Home';
 import AddProduct from './Components/AddProduct/AddProduct';
+import Provider from './Provider/Provider';
+import Category from './pages/category/Category';
+import Detailscards from './Components/detailCard/Detailscards';
+import Mycart from './Components/Card/Mycart';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Root />,
     children: [
       {
-        path:'/',
-        element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/categories')
+        path: '/',
+        element: <Home></Home>,
+        loader:() => fetch('http://localhost:5000/categories')
       },
       {
         path: "/login",
         element: <Login />,
       },
       {
-        path:'/register',
-        element:<Register></Register>
+        path: '/register',
+        element: <Register></Register>
       },
       {
-        path:'/addproduct',
-        element:<AddProduct></AddProduct>
+        path: '/addproduct',
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path:'/detailscards',
+        element:<Detailscards></Detailscards>,
+      },
+      {
+        path:'/mycart',
+        element:<Mycart></Mycart>,
+        loader:() => fetch('http://localhost:5000/categories')
+      },
+      {
+        path:'/category/:id',
+        element:<Category></Category>,
+        loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
       }
-
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Provider>
       <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )

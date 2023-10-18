@@ -1,19 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ categorie }) => {
-    const{imageurl,name}=categorie || {}
-    console.log(categorie)
-    return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure><img className=' h-60 w-full' src={imageurl} alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
+  const { imageurl, name,_id } = categorie || {}
+  console.log(categorie)
+  return (
+    <Link to={`/category/${_id}`}>
+      <div className=''>
+        <img className='h-36 w-48 rounded-t-xl' src={imageurl} alt="" />
+        <h4 className='text-center'>{name}</h4>
       </div>
-    );
+    </Link>
+
+  );
 };
 
 export default Card;

@@ -7,6 +7,7 @@ const Header = () => {
        <li><NavLink to='/register'>Register</NavLink></li>
        <li><NavLink to='/login'>Login</NavLink></li>
        <li><NavLink to='/addproduct'>Add</NavLink></li>
+       <li><NavLink to='/mycart'>My Cart</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
