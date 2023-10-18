@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:() => fetch('http://localhost:5000/categories')
+        loader:() => fetch('/data.json')
       },
       {
         path: "/login",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path:'/category/:id',
         element:<Category></Category>,
-        loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+        loader:() => fetch("/data.json")
       }
     ],
   },

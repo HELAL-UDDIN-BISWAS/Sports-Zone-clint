@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Detailscards from '../detailCard/Detailscards';
-import { useLoaderData } from 'react-router-dom';
 
-
-const Prodectdetils = ({categorys}) => {
+const Prodectdetils = ({findcategory}) => {
   const [categoris,setcategori]=useState([])
 
      useEffect(()=>{
@@ -12,14 +10,14 @@ const Prodectdetils = ({categorys}) => {
       .then(data=>setcategori(data))
           }
      ,[])
-
      const categoryfilter = categoris?.splice(0,3)
-    const {imageurl,name,BraNdname,Type,ShortDescription,Rating}=categorys || {}
+  const {image_url,name,BraNdname,type,short_description,}=findcategory || {}
+
     return (
         <div>
         <div className="carousel w-full h-96">
         <div id="slide1" className="carousel-item relative w-full">
-          <img src={imageurl}className="w-full" />
+          <img src={image_url}className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">❮</a> 
             <a href="#slide2" className="btn btn-circle">❯</a>
@@ -49,9 +47,9 @@ const Prodectdetils = ({categorys}) => {
       </div>
       <h2>{name}</h2>
       <p>BraNdname:{BraNdname}</p>
-      <p>Type:{Type}</p>
-      <span>ShortDescription:{ShortDescription}</span>
-      <h4>Rating:{Rating}</h4>
+      <p>Type:{type}</p>
+      <span>ShortDescription:{short_description}</span>
+      
       <div className='grid lg:grid-cols-3 mx-auto'>
         {
           categoryfilter.map(categoryitem=><Detailscards categoryitem={categoryitem}></Detailscards>)

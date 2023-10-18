@@ -1,0 +1,49 @@
+[
+    { "id":1,
+      "image_url": "https://i.ibb.co/yfJ6k5T/Screenshot-2023-10-18-000757.png",
+      "name": "Spotify",
+      "brand_name": "Spotify",
+      "type": "Website",
+      "short_description": "Spotify is a digital music, podcast, and video service that gives you …"
+    },
+    {
+        "id":2,
+      "image_url": "https://i.ibb.co/GQHfpzV/alexander-shatov-Jl-O3-o-Y5-Zl-Q-unsplash.jpg",
+      "name": "Product 2",
+      "brand_name": "Brand B",
+      "type": "Clothing",
+      "short_description": "Fashionable and comfortable attire for all occasions."
+    },
+    {
+        "id":3,
+      "image_url": "https://example.com/image3.jpg",
+      "name": "Product 3",
+      "brand_name": "Brand C",
+      "type": "Furniture",
+      "short_description": "Elegant and durable furniture pieces for your home."
+    },
+    {
+        "id":4,
+      "image_url": "https://example.com/image4.jpg",
+      "name": "Product 4",
+      "brand_name": "Brand D",
+      "type": "Books",
+      "short_description": "Best-selling novel that will keep you hooked."
+    },
+    {
+        "id":5,
+      "image_url": "https://example.com/image5.jpg",
+      "name": "Product 5",
+      "brand_name": "Brand E",
+      "type": "Kitchen Appliances",
+      "short_description": "Make cooking a breeze with our innovative appliances."
+    },
+    {
+        "id":6,
+      "image_url": "https://example.com/image6.jpg",
+      "name": "Product 6",
+      "brand_name": "Brand F",
+      "type": "Toys",
+      "short_description": "Fun and educational toys for kids of all ages."
+    }
+  ]
