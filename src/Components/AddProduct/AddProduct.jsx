@@ -24,7 +24,6 @@ const AddProduct = () => {
         .then(data=>{
             console.log(data)
         })
-
     }
     return (
         <div className="hero  min-h-screen bg-base-200">

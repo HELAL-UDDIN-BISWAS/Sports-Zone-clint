@@ -14,6 +14,7 @@ import Provider from './Provider/Provider';
 import Category from './pages/category/Category';
 import Detailscards from './Components/detailCard/Detailscards';
 import Mycart from './Components/Card/Mycart';
+import Ubdatecard from './pages/Ubdatecart/Ubdatecard';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
         path:'/category/:id',
         element:<Category></Category>,
         loader:() => fetch("/data.json")
+      },
+      {
+        path:'/Ubdatecard/:id',
+        element:<Ubdatecard></Ubdatecard>,
+        loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+
       }
     ],
   },

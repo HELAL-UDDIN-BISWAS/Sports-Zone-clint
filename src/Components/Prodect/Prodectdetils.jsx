@@ -11,7 +11,7 @@ const Prodectdetils = ({findcategory}) => {
           }
      ,[])
      const categoryfilter = categoris?.splice(0,3)
-  const {image_url,name,BraNdname,type,short_description,}=findcategory || {}
+  const {image_url,name,brand_name,type,short_description,}=findcategory || {}
 
     return (
         <div>
@@ -46,7 +46,7 @@ const Prodectdetils = ({findcategory}) => {
         </div>
       </div>
       <h2>{name}</h2>
-      <p>BraNdname:{BraNdname}</p>
+      <p>BraNd Name:{brand_name}</p>
       <p>Type:{type}</p>
       <span>ShortDescription:{short_description}</span>
       
