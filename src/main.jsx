@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import Root from './Root/Root';
@@ -15,6 +16,7 @@ import Category from './pages/category/Category';
 import Detailscards from './Components/detailCard/Detailscards';
 import Mycart from './Components/Card/Mycart';
 import Ubdatecard from './pages/Ubdatecart/Ubdatecard';
+import PrivateRouts from './Components/Routs/PrivateRouts';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <AddProduct></AddProduct>
+        element: <PrivateRouts><AddProduct></AddProduct></PrivateRouts>
       },
       {
         path:'/detailscards',
@@ -54,7 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/Ubdatecard/:id',
-        element:<Ubdatecard></Ubdatecard>,
+        element:<PrivateRouts><Ubdatecard></Ubdatecard>,</PrivateRouts>,
         loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
 
       }

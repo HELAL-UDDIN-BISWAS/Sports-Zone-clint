@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/Provider';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {signin}=useContext(AuthContext)
+    const navegate=useNavigate()
     const handleLogin=(event)=>{
         event.preventDefault()
         const form =event.target
@@ -10,7 +12,10 @@ const Login = () => {
         const password=form.password.value
         console.log(email,password)
         signin(email,password)
-        .then(res=>console.log(res))
+        .then(res=>{
+          console.log(res)
+        navegate('/')
+        })
         .catch(error=>console.error(error))
     }
     return (

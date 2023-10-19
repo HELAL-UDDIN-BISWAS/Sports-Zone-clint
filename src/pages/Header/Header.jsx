@@ -1,12 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/Provider';
 
 const Header = () => {
+  const {user,logout}=useContext(AuthContext);
+
     const login=<>
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/register'>Register</NavLink></li>
        <li><NavLink to='/login'>Login</NavLink></li>
-       <li><NavLink to='/addproduct'>Add</NavLink></li>
+       <li><NavLink to='/addproduct'>Add Prodect</NavLink></li>
        <li><NavLink to='/mycart'>My Cart</NavLink></li>
     </>
     return (
@@ -32,7 +35,12 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          {
+            user ? <><span>{user.email}</span>
+          <button onClick={logout} className="btn">SignOut</button></>:
+          <Link to="/login"><button>Login</button></Link>
+
+          }
         </div>
       </div>
     );
