@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/Provider';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const {signin}=useContext(AuthContext)
@@ -14,9 +15,22 @@ const Login = () => {
         signin(email,password)
         .then(res=>{
           console.log(res)
+          Swal.fire({
+            icon: 'success',
+            title: 'OK',
+            text: 'Login in Success Full',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
         navegate('/')
         })
-        .catch(error=>console.error(error))
+        .catch(error=>{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+          console.error(error)})
     }
     return (
         <div onSubmit={handleLogin} className="hero min-h-screen bg-base-200">

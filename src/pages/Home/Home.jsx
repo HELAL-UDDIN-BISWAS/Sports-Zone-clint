@@ -14,14 +14,13 @@ const Home = () => {
            
             <div className='max-sm:flex-col mx-50 my-5 max-w-screen-xl mx-auto w-5/6'><h3 className='text-3xl '>Sports Zone - Your Ultimate Destination for Action-Packed Entertainment!"</h3></div>
 
-
             <div className='grid lg:grid-cols-6 lg:gap-4 mx-auto max-sm:flex-col mx-50 my-5 max-w-screen-xl  w-5/6 '>
                 {
                     categories?.map(categorie => <Card className="my-10 mx-auto items-center justify-center" key={categorie._id} categorie={categorie}></Card>)
                 }
             </div>
-            <div><SectionOne></SectionOne></div>
-            <div><SectionTwo></SectionTwo></div>
+            <div className='my-10'><SectionOne></SectionOne></div>
+            <div className='my-10'><SectionTwo></SectionTwo></div>
         </div>
     );
 };

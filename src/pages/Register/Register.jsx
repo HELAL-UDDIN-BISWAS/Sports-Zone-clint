@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/Provider';
+import Swal from 'sweetalert2';
 const Register = () => {
 const {register}=useContext(AuthContext)
 
@@ -11,7 +12,20 @@ const {register}=useContext(AuthContext)
         const password=form.password.value
         console.log(name,email,password)
         register(email,password)
-        .then(res=>console.log(res))
+        .then(res=>{
+            Swal.fire({
+                icon: 'success',
+                title: 'OK',
+                text: 'Login in Success Full',
+                footer: '<a href="">Why do I have this issue?</a>'
+              })
+            console.log(res)})
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+              })
         .catch(error=>console.error(error))
     }
     return (
