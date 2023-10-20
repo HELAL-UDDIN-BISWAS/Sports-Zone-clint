@@ -29,10 +29,10 @@ const Mycard = ({ mycart, mycarts, setmycarts }) => {
                                 confirmButtonText: 'DELETE'
                             })
                         }
-                        const remainig=mycarts.filter(cart=>cart._id !== id);
+                        const remainig = mycarts.filter(cart => cart._id !== id);
                         setmycarts(remainig)
 
-                        
+
                     })
 
             }
@@ -47,9 +47,11 @@ const Mycard = ({ mycart, mycarts, setmycarts }) => {
                 <h2 className="card-title">Name: {name}</h2>
                 <p>Type: {Type}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <Link to={`/Deteils/${_id}`}>
+                        <button className="btn btn-primary">Watch</button>
+                    </Link>
                     <Link to={`/Ubdatecard/${_id}`}>
-                    <button className="btn btn-primary">Ubdate</button>
+                        <button className="btn btn-primary">Ubdate</button>
                     </Link>
                     <button onClick={() => handaleDelete(_id)} className="btn btn-primary">X</button>
                 </div>

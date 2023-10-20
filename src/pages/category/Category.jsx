@@ -6,6 +6,7 @@ const Category = () => {
     const [findcategory, setfindcategory]=useState({})
     const {id}= useParams();
     const caregorys=useLoaderData();
+    console.log(findcategory)
     useEffect(()=>{
         const findpeoples=caregorys?.find(people=>people.id == id)
         setfindcategory(findpeoples)

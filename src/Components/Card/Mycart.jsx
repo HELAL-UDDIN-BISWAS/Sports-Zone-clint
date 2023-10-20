@@ -14,8 +14,7 @@ const Mycart = () => {
                     key={mycart._id}
                      mycart={mycart}
                      mycarts={mycarts}
-                     setmycarts={setmycarts}
-                     >
+                     setmycarts={setmycarts}>
                      </Mycard>)
             }
         </div>

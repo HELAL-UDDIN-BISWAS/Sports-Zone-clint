@@ -17,6 +17,7 @@ import Detailscards from './Components/detailCard/Detailscards';
 import Mycart from './Components/Card/Mycart';
 import Ubdatecard from './pages/Ubdatecart/Ubdatecard';
 import PrivateRouts from './Components/Routs/PrivateRouts';
+import Deteils from './pages/Deteils/Deteils';
 
 const router = createBrowserRouter([
   {
@@ -58,8 +59,12 @@ const router = createBrowserRouter([
         path:'/Ubdatecard/:id',
         element:<PrivateRouts><Ubdatecard></Ubdatecard>,</PrivateRouts>,
         loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
-
-      }
+      },
+{
+  path:"/Deteils/:id",
+  element:<PrivateRouts><Deteils></Deteils></PrivateRouts>,
+  loader:({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+}
     ],
   },
 ]);
