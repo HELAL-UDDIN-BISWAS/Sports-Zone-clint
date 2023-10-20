@@ -8,7 +8,7 @@ const SectionOne = () => {
             </div>
             <div className='col-span-1'>
                 <h1 className='text-3xl'>Sports Zone - Your Ultimate Destination for Action-Packed Entertainment!"</h1>
-                <p className='text-xl'>Tune in to Sports Zone for an adrenaline-pumping experience like no other. Whether you're a die-hard fan of football, basketball, tennis, or any other sport, we've got you covered. From live matches and in-depth analysis to exclusive athlete interviews and thrilling documentaries, Sports Zone is your gateway to the world of sports."
+                <p className='text-xl'>Tune to Sports Zone for an adrenaline-pumping experience like no other. Whether you're a die-hard fan of football, basketball, tennis, or any other sport, we've got you covered. From live matches and in-depth analysis to exclusive athlete interviews and thrilling documentaries, Sports Zone is your gateway to the world of sports.
 </p>
             </div>
         </div>

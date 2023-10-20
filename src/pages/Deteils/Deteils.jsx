@@ -15,7 +15,6 @@ const Deteils = () => {
           <p>ShortDescription: {ShortDescription}</p>
           <h2>Rating: {Rating}</h2>
           <div className="card-actions justify-end">
-          
           </div>
         </div>
       </div>
