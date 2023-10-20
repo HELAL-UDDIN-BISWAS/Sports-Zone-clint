@@ -2,31 +2,19 @@ import React from 'react';
 
 const SectionOne = () => {
     return (
-        <div className='mx-auto grid lg:grid-cols-5  lg:mx-20 gap-3'>
-            <div className='col-span-2'>
-                <div >
-                    <img className='h-96 w-full' src={'https://i.ibb.co/jDm5Cyf/marvel-1641554-1280.jpg'} alt="" />
-                </div>
+        <div className='grid lg:grid-cols-2 gap-6 items-center justify-around max-sm:flex-col mx-50  max-w-screen-xl mx-auto w-5/6'>
+            <div className='col-span-1'>
+                <img className='rounded' src={'https://i.ibb.co/zNHYdSb/tv-7725366-1280.jpg'} alt="" />
             </div>
-            <div className='col-span-3'>
-                <div className='grid lg:grid-cols-3'>
-                <div className='col-span-1'>
-                    <img src={'https://i.ibb.co/Rvngbf6/iron-man-6288206-1280.jpg'} alt="" />
-                </div>
-                <div className='col-span-1'>
-                    <img src={'https://i.ibb.co/Bz2TjmD/Screenshot-2023-10-19-235544.png'} alt="" />
-                </div>
-                <div className='col-span-1'>
-                    <img src={'https://i.ibb.co/Rvngbf6/iron-man-6288206-1280.jpg'} alt="" />
-                </div>
-                </div>
-               
-              
-                
+            <div className='col-span-1'>
+                <h1 className='text-3xl'>Sports Zone - Your Ultimate Destination for Action-Packed Entertainment!"</h1>
+                <p className='text-xl'>Tune in to Sports Zone for an adrenaline-pumping experience like no other. Whether you're a die-hard fan of football, basketball, tennis, or any other sport, we've got you covered. From live matches and in-depth analysis to exclusive athlete interviews and thrilling documentaries, Sports Zone is your gateway to the world of sports."
+</p>
             </div>
-
-
         </div>
+
+
+
     );
 };
 

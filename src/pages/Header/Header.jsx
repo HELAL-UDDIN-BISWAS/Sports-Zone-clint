@@ -25,7 +25,7 @@ const Header = () => {
              }
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <h2 className="mb-3 top-2/4 font-bold text-4xl text-black"><span className='text-4xl text-red-600'>S</span>ports <span className='text-4xl text-teal-800'>Z</span>one</h2>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
